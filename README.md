@@ -60,3 +60,44 @@ contenido index.html
     </body>
 </html>
 ```
+
+creamos un dominio
+```
+sudo nano /etc/nginx/sites-available/your_domain
+```
+
+contenido del dominio:
+```
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/your_domain/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name your_domain www.your_domain;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
+```
+
+creamos link
+```
+sudo ln -s /etc/nginx/sites-available/your_domain /etc/nginx/sites-enabled/
+```
+
+habilitamos memoria
+```
+sudo nano /etc/nginx/nginx.conf
+
+...
+http {
+    ...
+    server_names_hash_bucket_size 64;
+    ...
+}
+...
+
+```
