@@ -111,3 +111,17 @@ sudo systemctl restart nginx
 http://your_domain
 ```
 
+editamos
+```
+sudo nano /etc/nginx/sites-available/your_domain
+
+...
+server_name your_domain www.your_domain;
+...
+
+sudo nginx -t
+
+sudo systemctl reload nginx
+
+
+```
