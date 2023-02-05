@@ -125,3 +125,15 @@ sudo systemctl reload nginx
 
 
 ```
+
+obtenemos los certificados
+```
+sudo certbot --nginx -d your_domain -d www.your_domain
+
+elegimos opcion 2
+
+probamos
+sudo certbot renew --dry-run
+
+https://dominio
+```
