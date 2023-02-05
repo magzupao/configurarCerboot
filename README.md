@@ -101,3 +101,13 @@ http {
 ...
 
 ```
+
+probamos
+```
+sudo nginx -t
+
+sudo systemctl restart nginx
+
+http://your_domain
+```
+
