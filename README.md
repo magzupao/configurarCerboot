@@ -28,3 +28,35 @@ systemctl status nginx
 http://your_server_ip
 
 ```
+
+comandos utiles nginx
+```
+sudo systemctl stop nginx
+sudo systemctl start nginx
+sudo systemctl restart nginx
+sudo systemctl reload nginx
+sudo systemctl disable nginx
+sudo systemctl enable nginx
+
+```
+
+configuramos servidor
+```
+sudo mkdir -p /var/www/your_domain/html
+
+nano /var/www/your_domain/html/index.html
+
+```
+contenido index.html
+
+```
+<html>
+    <head>
+        <title>Welcome to your_domain</title>
+    </head>
+    <body>
+        <h1>Success! Your Nginx server is successfully configured for <em>your_domain</em>. </h1>
+<p>This is a sample page.</p>
+    </body>
+</html>
+```
